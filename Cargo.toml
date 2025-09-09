@@ -1,0 +1,25 @@
+[package]
+name = "MFTool"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+debug-assertions = false
+
+[profile.release]
+strip = true
+lto = "fat"
+codegen-units = 1
+opt-level = "z"
+
+[dependencies]
+dinvoke_rs = "=0.2.0"
+litcrypt2 = "=0.1.2"
+windows = { version = "0.51.0", features = ["Win32_Foundation", "Win32_Security", "Win32_Storage_FileSystem", "Win32_System_IO"] }
+regex-lite = "0.1"
+parser = { path = "parser" }
+utils = { path = "utils" }
+data = { path = "data" }
+
+[build-dependencies]
+static_vcruntime = "2.0"

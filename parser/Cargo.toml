@@ -1,0 +1,12 @@
+[package]
+name = "parser"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+regex-lite = "0.1"
+data = { path = "../data" }
+utils = { path = "../utils" }
+dinvoke_rs = "=0.2.0"
+litcrypt2 = "=0.1.2"
+windows = { version = "0.51.0", features = ["Win32_Foundation", "Win32_Security", "Win32_Storage_FileSystem", "Win32_System_IO"] }
